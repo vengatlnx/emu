@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#
+# Script to start multiple emulator in a single command
+#
+
+if [[ $# -eq 0 ]]; then
+    echo "`basename ${0}`:Usage: [device_name1] [device_name2] ... [device_nameN]"
+    echo "Eg: `basename ${0}` Nexus Lollipop"
+    exit
+fi
+
+for device in $@
+do
+    #TODO: Need to be check whether the device present in `android list avd`
+    emulator -avd $device -scale 96dpi -dpi-device 320 &
+    echo "$device emulator started."
+    sleep 20
+done
+
