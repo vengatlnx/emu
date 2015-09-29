@@ -6,11 +6,11 @@ in a single command.
 
 1. `git clone git@github.com:vengatlnx/emu.git`
 2. `cd emu`
-3. `chmod 0755 emu`
+3. `chmod 0755 ./emu`
 
 Add to your `.bashrc` or `zshrc`:
 
-`$ echo 'export $PATH="$HOME/emu:$PATH"' >> ~/.bashrc`
+`$ echo 'export PATH=$HOME/emu:$PATH' >> ~/.bashrc`
 
 to run:
 
